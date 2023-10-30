@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/work2.css">
 </head>
 <body>
+    <h1 class="title">じゃんけんアプリ</h1>
+
+    <div class="hands">
+
+        <div class="myhand">
+            <h1>自分</h1>
+            <img src="img/janken_gu.png" alt="" class="myhandpicture">
+            <h2 class="myhandsname">グー</h2>
+        </div>
+
+        <div class="enemyhand">
+            <h1>相手</h1>
+            <img src="img/janken_gu.png" alt="グー" class="items">
+            <h2>グー</h2>
+        </div>
     
+    </div>
+
+    <div class="result">
+        <h1 class="resulttext">あいこ</h1>
+    </div>
+
+    <div class="handchoice">
+        <p class="pickgu">グー</p>
+        <p class="pickchoki">チョキ</p>
+        <p class="pickpa">パー</p>
+    </div>
+    
+    <!-- jqueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jsを紐付ける -->
+    <script src="js/work2.js"></script>
 </body>
 </html>
