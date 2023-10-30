@@ -8,7 +8,6 @@ body {
     margin-top: 80px;
     color: aliceblue;
     font-weight: bold;
-    background: #111;
     text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
     padding: 10px;
 }
@@ -47,19 +46,16 @@ body {
 }
 
 .pickgu {
-    padding: 20px 80px;
-    margin: 16px auto;
-    background-color: lightgray;
+    width: 80px;
+    height: 80px;
 }
 
 .pickchoki {
-    padding: 20px 80px;
-    margin: 16px auto;
-    background-color: lightgray;
+    width: 80px;
+    height: 80px;
 }
 
 .pickpa {
-    padding: 20px 80px;
-    margin: 16px auto;
-    background-color: lightgray;
+    width: 80px;
+    height: 80px;
 }
