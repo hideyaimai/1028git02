@@ -18,36 +18,36 @@ $(".pickgu,.pickchoki,.pickpa").on("click",function () {
         imagepath = "img/janken_pa.png";
         computerhands = "パー";
     }
-    $(".items").attr("src",imagepath);
+    $(".enemyhandpicture").attr("src",imagepath);
 })
 
 $(".pickgu").on("click",function(){
-    $(".myhandsname").html("グー")
     $(".myhandpicture").attr("src", "img/janken_gu.png");
     playerhands = "グー";
 })
 
 $(".pickchoki").on("click",function(){
-    $(".myhandsname").html("チョキ")
     $(".myhandpicture").attr("src", "img/janken_choki.png");
     playerhands = "チョキ";
 })
 
 $(".pickpa").on("click",function(){
-    $(".myhandsname").html("パー")
     $(".myhandpicture").attr("src", "img/janken_pa.png");
     playerhands = "パー";
 })
 
 $(".pickpa").on("click",function() {
     if(computerhands === "グー"){
-        $(".resulttext").html("勝ち")
+        $(".resulttext")
+        .html("勝ち")
     }
     else if(computerhands === "チョキ"){
-        $(".resulttext").html("負け")
+        $(".resulttext")
+        .html("負け")
     }
     else{
-        $(".resulttext").html("あいこ")
+        $(".resulttext")
+        .html("あいこ")
     }
 });
 
@@ -65,12 +65,15 @@ $(".pickgu").on("click",function() {
 
 $(".pickchoki").on("click",function() {
     if(computerhands === "グー"){
-        $(".resulttext").html("負け")
+        $(".resulttext")
+        .html("負け")
     }
     else if(computerhands === "チョキ"){
-        $(".resulttext").html("あいこ")
+        $(".resulttext")
+        .html("あいこ")
     }
     else{
-        $(".resulttext").html("勝ち")
+        $(".resulttext")
+        .html("勝ち")
     }
 });
