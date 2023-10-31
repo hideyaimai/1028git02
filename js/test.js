@@ -7,17 +7,14 @@ $(".pickgu,.pickchoki,.pickpa").on("click",function () {
     let imagepath;
 
     if(random === 0){
-        $("h2").html("グー");
         imagepath = "img/janken_gu.png";
         computerhands = "グー";
     }
     else if(random === 1){
-        $("h2").html("チョキ");
         imagepath = "img/janken_choki.png";
         computerhands = "チョキ";
     }
     else if(random === 2){
-        $("h2").html("パー");
         imagepath = "img/janken_pa.png";
         computerhands = "パー";
     }
