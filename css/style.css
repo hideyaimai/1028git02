@@ -49,23 +49,35 @@ body {
 .handchoice {
     padding: 0px 240px;
 }
-
-.pickgu {
+.handchoice img {
     width: 80px;
     height: 80px;
-    padding: 16px 24px;
+    border-radius: 20%;
+    transition: background-color 0.3s;
+}
+
+.pickgu {
+    padding: 16px;
+    margin: 0px 16px;
+}
+.pickgu:hover {
+    background-color: rgba(237, 202, 196, 0.2);
 }
 
 .pickchoki {
-    width: 80px;
-    height: 80px;
-    padding: 16px 24px;
+    padding: 16px;
+    margin: 0px 16px;
+}
+.pickchoki:hover {
+    background-color: rgba(237, 202, 196, 0.2);
 }
 
 .pickpa {
-    width: 80px;
-    height: 80px;
-    padding: 16px 24px;
+    padding: 16px;
+    margin: 0px 16px;
+}
+.pickpa:hover {
+    background-color: rgba(237, 202, 196, 0.2);
 }
 
 .confirm {
