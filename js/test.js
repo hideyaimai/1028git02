@@ -18,7 +18,7 @@ $(".pickgu,.pickchoki,.pickpa").on("click",function () {
     }
 })
 
-// 以下3つはplayerhandsの変数を変更します。
+// 以下3つはplayerhandsを変更します。
 $(".pickgu").on("click",function(){
     playerhands = "グー";
     $(".pickgu").css("background-color","rgba(237, 202, 196, 0.4)")
@@ -40,7 +40,44 @@ $(".pickpa").on("click",function(){
     $(".pickpa").css("background-color", "rgba(237, 202, 196, 0.4)");
 })
 
-// 確定ボタンで変数をUIに反映します
+// 以下3つはresultを変更します。
+$(".pickpa").on("click",function() {
+    if(computerhands === "グー"){
+        result = "勝ち"
+    }
+    else if(computerhands === "チョキ"){
+        result = "負け"
+    }
+    else{
+        result = "あいこ"
+    }
+});
+
+$(".pickgu").on("click",function() {
+    if(computerhands === "グー"){
+        result = "あいこ"
+    }
+    else if(computerhands === "チョキ"){
+        result = "勝ち"
+    }
+    else{
+        result = "負け"
+    }
+});
+
+$(".pickchoki").on("click",function() {
+    if(computerhands === "グー"){
+        result = "負け"
+    }
+    else if(computerhands === "チョキ"){
+        result = "あいこ"
+    }
+    else{
+        result = "勝ち"
+    }
+});
+
+// 確定ボタンでhandsとresult変数をUIに反映します。
 $(".confirmbutton").on("click",function() {
     if(playerhands === "グー"){
         $(".myhandpicture").attr("src", "img/janken_gu.png");
@@ -61,47 +98,17 @@ $(".confirmbutton").on("click",function() {
     else{
         $(".enemyhandpicture").attr("src", "img/janken_pa.png");
     }
-});
 
-// 以下3つは勝敗判定をします。
-$(".pickpa").on("click",function() {
-    if(computerhands === "グー"){
+    if(result === "勝ち"){
         $(".resulttext")
         .html("勝ち")
     }
-    else if(computerhands === "チョキ"){
-        $(".resulttext")
-        .html("負け")
-    }
-    else{
-        $(".resulttext")
-        .html("あいこ")
-    }
-});
-
-$(".pickgu").on("click",function() {
-    if(computerhands === "グー"){
-        $(".resulttext").html("あいこ")
-    }
-    else if(computerhands === "チョキ"){
-        $(".resulttext").html("勝ち")
-    }
-    else{
-        $(".resulttext").html("負け")
-    }
-});
-
-$(".pickchoki").on("click",function() {
-    if(computerhands === "グー"){
-        $(".resulttext")
-        .html("負け")
-    }
-    else if(computerhands === "チョキ"){
+    else if(result === "あいこ"){
         $(".resulttext")
         .html("あいこ")
     }
     else{
         $(".resulttext")
-        .html("勝ち")
+        .html("負け")
     }
 });
