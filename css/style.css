@@ -1,14 +1,14 @@
 body {
     background-color: black;
     text-align: center;
-    align-items: center;
 }
 
 .title {
     margin-top: 80px;
+    margin-bottom: 20ppx;
     color: aliceblue;
     font-weight: bold;
-    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
     padding: 10px;
 }
 
@@ -29,33 +29,61 @@ body {
 
 .vstext {
     align-items: center;
+    margin: auto;
 }
 
 .enemyhand {
    margin: auto; 
 }
 
-.items {
+.enemyhandpicture {
     width: 300px;
     height: 300px;
 }
 
+.resulttext {
+    color: aliceblue;
+    margin: 40px 0px;
+}
+
 .handchoice {
-    display: flex;
     padding: 0px 240px;
 }
 
 .pickgu {
     width: 80px;
     height: 80px;
+    padding: 16px 24px;
 }
 
 .pickchoki {
     width: 80px;
     height: 80px;
+    padding: 16px 24px;
 }
 
 .pickpa {
     width: 80px;
     height: 80px;
+    padding: 16px 24px;
+}
+
+.confirm {
+    margin-top: 40px;
+}
+
+.confirmbutton {
+    color: aliceblue;
+    font-size: 24px;
+    border-style: solid;
+    display: inline;
+    padding: 8px 16px;
+}
+
+.numberOfWins {
+    color: aliceblue;
+}
+
+.numberOfWinsLog {
+    color: aliceblue;
 }
