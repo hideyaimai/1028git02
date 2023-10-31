@@ -23,17 +23,26 @@ $(".pickgu,.pickchoki,.pickpa").on("click",function () {
 
 $(".pickgu").on("click",function(){
     $(".myhandpicture").attr("src", "img/janken_gu.png");
+    $(".pickgu").css("background-color","rgba(237, 202, 196, 0.4)")
+    $(".pickchoki").css("background-color", "");
+    $(".pickpa").css("background-color", "");
     playerhands = "グー";
 })
 
 $(".pickchoki").on("click",function(){
     $(".myhandpicture").attr("src", "img/janken_choki.png");
     playerhands = "チョキ";
+    $(".pickgu").css("background-color","")
+    $(".pickchoki").css("background-color", "rgba(237, 202, 196, 0.4)");
+    $(".pickpa").css("background-color", "");
 })
 
 $(".pickpa").on("click",function(){
     $(".myhandpicture").attr("src", "img/janken_pa.png");
     playerhands = "パー";
+    $(".pickgu").css("background-color","")
+    $(".pickchoki").css("background-color", "");
+    $(".pickpa").css("background-color", "rgba(237, 202, 196, 0.4)");
 })
 
 $(".pickpa").on("click",function() {
@@ -77,3 +86,13 @@ $(".pickchoki").on("click",function() {
         .html("勝ち")
     }
 });
+
+$(document).ready(function() {
+    $(".confirmbutton").on("click", function() {
+      $(".background-image").addClass("show");
+      setTimeout(function() {
+        $(".background-image").removeClass("show");
+      }, 300); // 0.3秒後に背景画像を非表示にする
+    });
+  });
+  

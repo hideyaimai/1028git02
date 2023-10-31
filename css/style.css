@@ -4,8 +4,8 @@ body {
 }
 
 .title {
-    margin-top: 80px;
-    margin-bottom: 20ppx;
+    margin-top: 64px;
+    margin-bottom:64px;
     color: aliceblue;
     font-weight: bold;
     text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
@@ -25,6 +25,7 @@ body {
 .myhandpicture {
     width: 300px;
     height: 300px;
+    border-radius: 5%;
 }
 
 .vstext {
@@ -39,6 +40,7 @@ body {
 .enemyhandpicture {
     width: 300px;
     height: 300px;
+    border-radius: 5%;
 }
 
 .resulttext {
@@ -91,6 +93,9 @@ body {
     display: inline;
     padding: 8px 16px;
 }
+.confirmbutton:hover {
+    background-color: rgba(237, 202, 196, 0.2);
+}
 
 .numberOfWins {
     color: aliceblue;
@@ -99,3 +104,21 @@ body {
 .numberOfWinsLog {
     color: aliceblue;
 }
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/elect_background.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .background-image.show {
+    opacity: 0.5;
+  }
+  
