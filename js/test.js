@@ -78,37 +78,31 @@ $(".pickchoki").on("click",function() {
 });
 
 // 確定ボタンでhandsとresult変数をUIに反映します。
-$(".confirmbutton").on("click",function() {
-    if(playerhands === "グー"){
-        $(".myhandpicture").attr("src", "img/janken_gu.png");
-    }
-    else if(playerhands === "チョキ"){
-        $(".myhandpicture").attr("src", "img/janken_choki.png");
-    }
-    else{
-        $(".myhandpicture").attr("src", "img/janken_pa.png");
-    }
+$(".confirmbutton").on("click", function() {
+    setTimeout(function() {
+        if (playerhands === "グー") {
+            $(".myhandpicture").attr("src", "img/janken_gu.png");
+        } else if (playerhands === "チョキ") {
+            $(".myhandpicture").attr("src", "img/janken_choki.png");
+        } else {
+            $(".myhandpicture").attr("src", "img/janken_pa.png");
+        }
 
-    if(computerhands === "グー"){
-        $(".enemyhandpicture").attr("src", "img/janken_gu.png");
-    }
-    else if(computerhands === "チョキ"){
-        $(".enemyhandpicture").attr("src", "img/janken_choki.png");
-    }
-    else{
-        $(".enemyhandpicture").attr("src", "img/janken_pa.png");
-    }
+        if (computerhands === "グー") {
+            $(".enemyhandpicture").attr("src", "img/janken_gu.png");
+        } else if (computerhands === "チョキ") {
+            $(".enemyhandpicture").attr("src", "img/janken_choki.png");
+        } else {
+            $(".enemyhandpicture").attr("src", "img/janken_pa.png");
+        }
+    }, 500); // 500ミリ秒 = 0.5秒
 
-    if(result === "勝ち"){
-        $(".resulttext")
-        .html("勝ち")
-    }
-    else if(result === "あいこ"){
-        $(".resulttext")
-        .html("あいこ")
-    }
-    else{
-        $(".resulttext")
-        .html("負け")
+    if (result === "勝ち") {
+        $(".resulttext").html("勝ち");
+    } else if (result === "あいこ") {
+        $(".resulttext").html("あいこ");
+    } else {
+        $(".resulttext").html("負け");
     }
 });
+
