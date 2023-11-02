@@ -111,17 +111,17 @@ $(".confirmbutton").on("click", function() {
     // じゃんけんの結果
     setTimeout(function() {
         if (result === "勝ち") {
-            $(".resulttext").html("勝ち");
+            $(".resulttext").html("勝ち").css("text-shadow","0 0 20px red, 0 0 20px red, 0 0 30px red, 0 0 30px red");
         } else if (result === "あいこ") {
-            $(".resulttext").html("あいこ");
+            $(".resulttext").html("あいこ").css("text-shadow","0 0 20px white, 0 0 20px red, 0 0 30px white, 0 0 30px white");
         } else {
-            $(".resulttext").html("負け");
+            $(".resulttext").html("負け").css("text-shadow","0 0 20px blue, 0 0 20px blue, 0 0 30px blue, 0 0 30px blue");
         }
     }, 2500); 
 
     // リセット
     setTimeout(function() {
-        $(".resulttext").html("手を選択");
+        $(".resulttext").html("手を選択").css("text-shadow","");
         $(".myhandpicture").attr("src", "img/door.jpeg");
         $(".enemyhandpicture").attr("src", "img/door.jpeg");
         $(".pickgu").css("background-color","")
