@@ -1,6 +1,7 @@
 let playerhands = "";
 let computerhands = "";
 let result = "";
+let wins = "";
 
 // computerhandsをランダムに変更します。
 $(".pickgu,.pickchoki,.pickpa").on("click",function () {
@@ -77,9 +78,18 @@ $(".pickchoki").on("click",function() {
     }
 });
 
-// 確定ボタンでhandsとresult変数をUIに反映します。
+// 確定ボタンでhandsとresult変数を画面に反映します。
 $(".confirmbutton").on("click", function() {
+    // テキスト変化
     setTimeout(function() {
+        $(".resulttext").html("じゃんけん")
+    }, 500);
+
+    // じゃんけんの手を変更
+    setTimeout(function() {
+        $(".resulttext").html("ぽん！！")
+
+        // 自身の手を変化
         if (playerhands === "グー") {
             $(".myhandpicture").attr("src", "img/janken_gu.png");
         } else if (playerhands === "チョキ") {
@@ -87,7 +97,8 @@ $(".confirmbutton").on("click", function() {
         } else {
             $(".myhandpicture").attr("src", "img/janken_pa.png");
         }
-
+        
+        // コンピューターの手を変化
         if (computerhands === "グー") {
             $(".enemyhandpicture").attr("src", "img/janken_gu.png");
         } else if (computerhands === "チョキ") {
@@ -95,14 +106,27 @@ $(".confirmbutton").on("click", function() {
         } else {
             $(".enemyhandpicture").attr("src", "img/janken_pa.png");
         }
-    }, 500); // 500ミリ秒 = 0.5秒
+    }, 1500);
 
-    if (result === "勝ち") {
-        $(".resulttext").html("勝ち");
-    } else if (result === "あいこ") {
-        $(".resulttext").html("あいこ");
-    } else {
-        $(".resulttext").html("負け");
-    }
+    // じゃんけんの結果
+    setTimeout(function() {
+        if (result === "勝ち") {
+            $(".resulttext").html("勝ち");
+        } else if (result === "あいこ") {
+            $(".resulttext").html("あいこ");
+        } else {
+            $(".resulttext").html("負け");
+        }
+    }, 2500); 
+
+    // リセット
+    setTimeout(function() {
+        $(".resulttext").html("手を選択");
+        $(".myhandpicture").attr("src", "img/door.jpeg");
+        $(".enemyhandpicture").attr("src", "img/door.jpeg");
+        $(".pickgu").css("background-color","")
+        $(".pickchoki").css("background-color", "");
+        $(".pickpa").css("background-color", "");
+    }, 5000);
 });
 
