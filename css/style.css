@@ -4,8 +4,8 @@ body {
 }
 
 .title {
-    font-size: 32px;
-    margin-top: 56px;
+    font-size: 40px;
+    margin-top: 48px;
     margin-bottom:56px;
     color: aliceblue;
     font-weight: bold;
@@ -24,8 +24,8 @@ body {
 }
 
 .myhandpicture {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 5%;
 }
 
@@ -39,8 +39,8 @@ body {
 }
 
 .enemyhandpicture {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 5%;
 }
 
