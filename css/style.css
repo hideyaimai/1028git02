@@ -46,7 +46,8 @@ body {
 
 .resulttext {
     color: aliceblue;
-    margin-top: 32px;
+    margin-top: 48px;
+    margin-bottom: 48px;
 }
 
 .handchoice {
@@ -84,7 +85,7 @@ body {
 }
 
 .confirm {
-    margin-top: 32px;
+    margin-top: 24px;
 }
 
 .confirmbutton {
@@ -96,20 +97,4 @@ body {
 }
 .confirmbutton:hover {
     background-color: rgba(237, 202, 196, 0.2);
-}
-
-.numbers {
-    display: flex;
-    margin-top: 32px;
-    padding: 0px 320px;
-}
-
-.numberOfWins {
-    color: aliceblue;
-    margin: 0px auto;
-}
-
-.numberOfWinsLog {
-    color: aliceblue;
-    margin: 0px auto;
 }
